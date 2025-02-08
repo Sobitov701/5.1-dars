@@ -153,8 +153,8 @@ const products = {
   Banan: 20000,
 };
 
-Object.values(products).reduce((sum, price) => {
-  sum + price;
-}, 0);
+function Price(obj) {
+  return Object.values(obj).reduce((sum, price) => sum + price, 0);
+}
 
-console.log(products);
+console.log(Price(products));
