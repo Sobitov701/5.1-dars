@@ -9,9 +9,7 @@ const people = [
 ];
 
 function getAverageAge(arr) {
-  const totalAge = arr.reduce((sum, person) => {
-    sum + person.age;
-  }, 0);
+  const totalAge = arr.reduce((sum, person) => sum + person.age, 0);
   return totalAge / arr.length;
 }
 
@@ -123,20 +121,16 @@ console.log(squared(5));
 //8-misol
 //2-misoldan hosil bo’lgan objectning kalitlari va qiymatlari yig’indisini toping.
 
-const obj = { 1: 1, 2: 4, 3: 9, 4: 16, 5: 25 };
+const object = { 1: 1, 2: 4, 3: 9, 4: 16, 5: 25 };
 
 function sumKeysAndValues(obj) {
-  const keysSum = Object.keys(obj).reduce((sum, key) => {
-    sum + Number(key);
-  }, 0);
-  const valuesSum = Object.values(obj).reduce((sum, value) => {
-    sum + value;
-  }, 0);
+  const keysSum = Object.keys(obj).reduce((sum, key) => sum + Number(key), 0);
+  const valuesSum = Object.values(obj).reduce((sum, value) => sum + value, 0);
 
   return keysSum + valuesSum;
 }
 
-console.log(sumKeysAndValues(obj));
+console.log(sumKeysAndValues(object));
 
 //9-misol
 //Stringlar massivi berilgan. Shunday object hosil qilingki, o’sha objectning kalitlari massiv elementlaridan va qiymatlari esa ularning uzunligidan iborat bo’lsin. (for)
